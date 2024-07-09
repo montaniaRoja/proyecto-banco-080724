@@ -184,7 +184,7 @@ function crearCuenta() {
         moneda: moneda
     };
 
-    fetch('http://localhost:3000/api/cuenta/create/' + idcliente, {
+    fetch('http://34.42.1.3:3000/api/cuenta/create/' + idcliente, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('ID:', idcliente);
     console.log('Nombre:', nombre);
 
-    fetch('http://localhost:3000/api/cliente/find/' + idcliente + '/cuentas')
+    fetch('http://34.42.1.3:3000/api/cliente/find/' + idcliente + '/cuentas')
         .then(function (response) {
             if (response.ok) {
                 return response.json();
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(idcuenta);
             document.getElementById('txtcuenta').value=hnocuenta;
             
-            fetch('http://localhost:3000/api/cuenta/find/'+idcuenta+'/transacciones')
+            fetch('http://34.42.1.3:3000/api/cuenta/find/'+idcuenta+'/transacciones')
         .then(function (response) {
             if (response.ok) {
                 return response.json();
@@ -201,7 +201,7 @@ function enviarTransaccion(cuenta_id, tipo_movimiento, monto) {
             monto: monto
         };
 
-        fetch('http://localhost:3000/api/transaccion/create/', {
+        fetch('http://34.42.1.3:3000/api/transaccion/create/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -249,7 +249,7 @@ function actualizarSaldo(cuenta_id, saldo_cuenta, numero_cuenta) {
         id: cuenta_id,
         saldo: saldo_cuenta
     };
-    const url = 'http://localhost:3000/api/cuenta/' + cuenta_id;
+    const url = 'http://34.42.1.3:3000/api/cuenta/' + cuenta_id;
 
     console.log('la ruta es ' + url);
 
