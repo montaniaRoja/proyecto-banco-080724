@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     usuario: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     clave_secreta: {
       type: DataTypes.INTEGER,
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     keyword: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
   }, {
     sequelize,
